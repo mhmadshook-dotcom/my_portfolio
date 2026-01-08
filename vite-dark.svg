@@ -1,0 +1,94 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="masterGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1e293b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#334155;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="highlightGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#38bdf8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0ea5e9;stop-opacity:1" />
+    </linearGradient>
+    <filter id="executiveShadow">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="12"/>
+      <feOffset dx="0" dy="8" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.12"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="textGlow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Premium background circle -->
+  <circle cx="256" cy="256" r="200" fill="url(#masterGradient)" filter="url(#executiveShadow)"/>
+  
+  <!-- Accent ring with gradient -->
+  <circle cx="256" cy="256" r="200" fill="none" stroke="url(#highlightGradient)" stroke-width="3" opacity="0.4"/>
+  <circle cx="256" cy="256" r="195" fill="none" stroke="url(#highlightGradient)" stroke-width="1" opacity="0.2"/>
+  
+  <!-- Premium MSS monogram -->
+  <text x="256" y="265" 
+        font-family="'Poppins', 'Inter', 'SF Pro Display', sans-serif" 
+        font-size="85" 
+        font-weight="700" 
+        fill="white" 
+        text-anchor="middle" 
+        letter-spacing="6"
+        filter="url(#textGlow)">MSS</text>
+  
+  <!-- Elegant separator -->
+  <rect x="216" y="280" width="80" height="2" rx="1" fill="url(#highlightGradient)" opacity="0.5"/>
+  
+  <!-- Professional title -->
+  <text x="256" y="305" 
+        font-family="'Poppins', 'Inter', 'SF Pro Display', sans-serif" 
+        font-size="12" 
+        font-weight="500" 
+        fill="#38bdf8" 
+        text-anchor="middle" 
+        letter-spacing="4"
+        opacity="0.9">SOFTWARE ENGINEER</text>
+  
+  <!-- Refined code brackets -->
+  <g opacity="0.3" stroke="#38bdf8">
+    <path d="M 160 235 L 148 256 L 160 277" 
+          stroke-width="2.5" 
+          fill="none" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+    <path d="M 352 235 L 364 256 L 352 277" 
+          stroke-width="2.5" 
+          fill="none" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+  </g>
+  
+  <!-- Geometric accents - minimal -->
+  <g opacity="0.15" stroke="url(#highlightGradient)">
+    <line x1="180" y1="180" x2="200" y2="180" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="180" y1="180" x2="180" y2="200" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="332" y1="180" x2="312" y2="180" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="332" y1="180" x2="332" y2="200" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="180" y1="332" x2="200" y2="332" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="180" y1="332" x2="180" y2="312" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="332" y1="332" x2="312" y2="332" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="332" y1="332" x2="332" y2="312" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Central focal point -->
+  <circle cx="256" cy="318" r="1.5" fill="#38bdf8" opacity="0.6"/>
+  
+  <!-- Top and bottom accent marks -->
+  <rect x="252" y="165" width="8" height="1" rx="0.5" fill="url(#highlightGradient)" opacity="0.3"/>
+  <rect x="252" y="346" width="8" height="1" rx="0.5" fill="url(#highlightGradient)" opacity="0.3"/>
+</svg>
